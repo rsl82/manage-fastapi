@@ -65,7 +65,7 @@ def run(prod: bool = typer.Option(False)):
         args.append("--log-level debug")
         args.append("--host 0.0.0.0")
         args.append("--port 8000")
-        args.append("--access-log") 
+        args.append("--reload")
     app_file = os.getenv("FASTAPI_APP", "app.main")
     subprocess.call(["uvicorn", f"{app_file}:app", *args])
 
