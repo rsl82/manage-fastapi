@@ -63,7 +63,7 @@ def run(prod: bool = typer.Option(False)):
     args = []
     if not prod:
         args.append("--host")
-        args.append("10.28.224.142")
+        args.append("0.0.0.0")
         args.append("--port")
         args.append("30016")
         args.append("--reload")
