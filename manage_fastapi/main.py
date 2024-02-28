@@ -63,9 +63,9 @@ def run(prod: bool = typer.Option(False)):
     args = []
     if not prod:
         args.append("--host")
-        args.append("0.0.0.0")
+        args.append("10.28.224.142")
         args.append("--port")
-        args.append("8000")
+        args.append("30016")
         args.append("--reload")
     app_file = os.getenv("FASTAPI_APP", "app.main")
     subprocess.call(["uvicorn", f"{app_file}:app", *args])
