@@ -62,7 +62,6 @@ def startapp(name: str):
 def run(prod: bool = typer.Option(False)):
     args = []
     if not prod:
-        args.append("--log-level debug")
         args.append("--host 0.0.0.0")
         args.append("--port 8000")
         args.append("--reload")
